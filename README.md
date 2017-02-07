@@ -4,29 +4,29 @@ This `ember-cli` addon imports the Packery library and allows you to quickly and
 ## Installation
 `ember install:addon ember-packery`
 
-That's it! The Packery library will automatically be imported in your app, and the `packery` component will be available to all of your templates.
+That's it! The Packery library will automatically be imported in your app, and the `grid-packery` component will be available to all of your templates.
 
-## `packery`
-The `packery` component accepts all of the options that `Packery` exposes. The naming is the same, and any option not specified will use the `Packery` default.
+## `grid-packery`
+The `grid-packery` component accepts all of the options that `Packery` exposes. The naming is the same, and any option not specified will use the `Packery` default.
 
 For example, if we wanted to a basic `Packery` view, we'd included the following in our template.
 
 ```
-{{#packery}}
+{{#grid-packery}}
   <div class="item">Item 1</div>
   <div class="item">Item 2</div>
   <div class="item">Item 3</div>
-{{/packery}}
+{{/grid-packery}}
 ```
 
-If we wanted to redefine the `item` class for `Packery`, we'd write the following:
+If we wanted to redefine the `item` class for `grid-packery`, we'd write the following:
 
 ```
-{{#packery itemSelector=".piece"}}
+{{#grid-packery itemSelector=".piece"}}
   <div class="piece">Item 1</div>
   <div class="piece">Item 2</div>
   <div class="piece">Item 3</div>
-{{/packery}}
+{{/grid-packery}}
 ```
 
 For a full list of options that are exposed, please see the [Packery options](http://packery.metafizzy.co/options.html).
@@ -40,13 +40,13 @@ We can specify an `items` attribute that `ember-packery` will observe. When the 
 For example, if our controller exposes the enumerable property `colors`:
 
 ```
-{{#packery items=colors}}
+{{#grid-packery items=colors}}
   {{#each colors}}
   <div class="item">
     Name: {{name}}
   </div>
   {{/each}}
-{{/packery}}
+{{/grid-packery}}
 ```
 
 Every time the length of the `colors` property is changed, Packery will account for it and generate a new layout.

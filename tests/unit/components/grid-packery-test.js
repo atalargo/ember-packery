@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForComponent('packery', 'PackeryComponent', {
+moduleForComponent('grid-packery', 'PackeryComponent', {
 
 });
 

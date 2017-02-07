@@ -18,7 +18,7 @@ var getOptions = function (keys) {
 };
 
 export default Ember.Component.extend({
-  classNames: ['packery'],
+  classNames: ['grid-packery'],
 
   options: null,
   items: null,
